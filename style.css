@@ -292,7 +292,7 @@ button#more {
 
 .layer {
   width: 100%;
-  background-color: #ebf7fc;
+  background-color: #c6eeff;
   transition: 0.3s ease all;
   z-index: 1;
 }
@@ -310,7 +310,7 @@ button#more {
   text-align: center;
   line-height: 1;
   padding: 9px 4px;
-  background-color: #03a9f4;
+  background-color: rgb(85, 196, 233);
   border-radius: 50%;
   transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
 }

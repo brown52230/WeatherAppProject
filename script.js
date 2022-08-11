@@ -176,7 +176,7 @@ form.addEventListener("submit", (e) => {
   const inputVal = input.value;
   const limit = 4;
   //ajax here
-  const url = `http://api.openweathermap.org/geo/1.0/direct?q=${inputVal}&limit=${limit}&appid=90f14c855cac366c6c17ac5c2c77d82c`;
+  const url = `https://api.openweathermap.org/geo/1.0/direct?q=${inputVal}&limit=${limit}&appid=90f14c855cac366c6c17ac5c2c77d82c`;
 
   fetch(url)
 	.then((response) => response.json())

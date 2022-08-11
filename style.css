@@ -1,0 +1,413 @@
+@charset "ISO-8859-1";
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: powderblue;
+  color: rgb(31, 45, 61);
+}
+
+#content {
+  margin: clamp(
+    30px,
+    calc(30px + (100 - 30) * ((100vw - 1000px) / (1600 - 1000))),
+    100px
+  );
+}
+
+p.data {
+  margin-bottom: 0px;
+}
+
+p.subtitle {
+  font-size: small;
+  margin-top: 0px;
+}
+
+button.request {
+  display: inline-block;
+  color: #1f2d3d;
+  font-size: large;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: Arial;
+  border-radius: 45px;
+  margin: 5px;
+  background-color: rgb(250, 111, 95);
+  border-style: hidden;
+  cursor: pointer;
+}
+
+.request:hover {
+  background-color: rgb(235, 111, 97);
+  transition: 0.3s ease all;
+}
+
+div.banner {
+  background-color: lightblue;
+  padding: 5px;
+  display: block;
+  font-family: Arial;
+  font-size: 20px;
+  padding-top: 25px;
+  padding-right: 25px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  color: #1f2d3d;
+  border-radius: 10px;
+  line-height: 1.5;
+  box-shadow: 0px 0px 20px #ffffff50;
+  position: absolute;
+  left: 1%;
+  top: 1%;
+}
+
+.banner#warning {
+  background-color: Salmon;
+  text-align: center;
+}
+
+.primary {
+  font-family: Arial;
+  font-size: 20px;
+  padding-top: 25px;
+  padding-right: 25px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+}
+
+.primary #temp {
+  font-size: 100px;
+  text-align: center;
+}
+
+.primary #mainConditions {
+  text-align: center;
+}
+
+.content {
+  background-color: lightblue;
+  font-family: Arial;
+  font-size: 20px;
+  padding: 5%;
+  color: #1f2d3d;
+  border-radius: 10px;
+  line-height: 1.5;
+  border-radius: 10px;
+  line-height: 1.5;
+  box-shadow: 0px 0px 20px #ffffff50;
+}
+
+.content h3 {
+  text-align: center;
+}
+
+.block {
+  background-color: lightblue;
+  font-family: Arial;
+  font-size: 20px;
+  padding-top: 25px;
+  padding-right: 25px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  color: #1f2d3d;
+  border-radius: 10px;
+  line-height: 1.5;
+  border-radius: 10px;
+  line-height: 1.5;
+  box-shadow: 0px 0px 20px #ffffff50;
+  margin-bottom: 15px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#details.column {
+  padding-left: 0px;
+}
+
+#more.column {
+  padding: 0px;
+  padding-right: 0x;
+}
+
+#sun.column {
+  padding-right: 0px;
+}
+
+#tempCol.column {
+  width: 35%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+#layout.column {
+  width: 65%;
+}
+
+@media screen and (max-width: 900px) {
+  .column {
+    width: 100%;
+  }
+  #tempCol.column {
+    width: 100%;
+    align-items: center;
+    height: 100%;
+  }
+  #layout.column {
+    width: 100%;
+    padding: 0px;
+  }
+  #details.column,
+  #windCol.column,
+  #sun.column {
+    padding: 0px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  div.modal-content {
+    margin-left: 5%;
+    padding: 20px;
+    width: 90%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+}
+@media screen and (max-width: 900px) and (min-width: 350px) {
+  .column {
+    width: 100%;
+    padding: 10px;
+  }
+  div.modal-content {
+    margin-left: 10%;
+    padding: 20px;
+    width: 80%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+}
+
+@media screen and (max-width: 1215px) and (min-width: 900px) {
+  div#content.row {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  #tempCol.column {
+    width: 25%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+  }
+  #layout.column {
+    width: 75%;
+  }
+  div#warning.banner {
+    font-size: medium;
+  }
+  button.request {
+    font-size: small;
+  }
+  div.modal-content {
+    margin-left: 15%;
+    padding: 20px;
+    width: 70%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+}
+
+.knobs,
+.layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.button {
+  position: relative;
+  top: 50%;
+  width: 74px;
+  height: 36px;
+  margin: -20px auto 0 auto;
+  overflow: hidden;
+  position: center;
+}
+
+button#search {
+  position: absolute;
+  left: 1%;
+  top: 1%;
+}
+button#more {
+  position: absolute;
+  right: 1%;
+  top: 1%;
+}
+
+.button.r,
+.button.r .layer {
+  border-radius: 100px;
+}
+
+.button.b2 {
+  border-radius: 2px;
+}
+
+.checkbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.knobs {
+  z-index: 2;
+}
+
+.layer {
+  width: 100%;
+  background-color: #ebf7fc;
+  transition: 0.3s ease all;
+  z-index: 1;
+}
+
+#button .knobs:before {
+  content: "F";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 20px;
+  height: 10px;
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+  padding: 9px 4px;
+  background-color: #03a9f4;
+  border-radius: 50%;
+  transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+}
+
+#button .checkbox:checked + .knobs:before {
+  content: "C";
+  left: 42px;
+  background-color: rgb(250, 111, 95);
+}
+
+#button .checkbox:checked ~ .layer {
+  background-color: rgb(255, 230, 227);
+}
+
+#button .knobs,
+#button .knobs:before,
+#button .layer {
+  transition: 0.3s ease all;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  margin-left: 25%;
+  padding: 20px;
+  width: 50%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.close {
+  color: rgb(31, 45, 61);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+  transition: 0.3s ease all;
+}
+
+input[type="text"] {
+  display: inline-block;
+  color: rgb(31, 45, 61);
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: Arial;
+  border-radius: 45px;
+  margin: 5px;
+  background-color: rgb(207, 232, 240);
+  border-style: hidden;
+  cursor: text;
+}
+
+button[type="submit"],
+button.select {
+  display: inline-block;
+  color: rgb(31, 45, 61);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: Arial;
+  border-radius: 45px;
+  margin: 5px;
+  background-color: rgb(85, 196, 233);
+  border-style: hidden;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover,
+button.select:hover {
+  background-color: rgb(124, 208, 236);
+  color: rgb(31, 45, 61);
+  transition: 0.3s ease all;
+  cursor: pointer;
+}
+
+h2 {
+  margin-bottom: 0px;
+}

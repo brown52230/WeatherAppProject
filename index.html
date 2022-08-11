@@ -9,7 +9,101 @@
 </head>
 
 
-</div>
+<body>
+    <button class="select" id="search" onclick="modal()">&#x1F50E;&#xFE0E;</button>
+    <button class="select" id="more">&#9776;</button>
+    <div class="banner" id="warning">Location access is needed for weather data.
+        <button class="request" id="locReq" onclick="locRequest()">Request Location</button>
+        <button class="request" id="myBtn" onclick="modal()">Enter Location</button>
+    </div>
 
-<script src=script.js></script>
+
+    <div id="modal" class="modal">
+
+        <div id="modal" class="modal-content content block">
+            <span class="close">&times;</span>
+            <p>Enter your location.</p>
+            <p class="subtitle">Searching for a location is approximate, it may not be perfectly accurate.</p>
+            <form>
+                <input type="text" placeholder="Ex: New York,US" autofocus>
+                <span class="msg"></span>
+                <button type="submit">Search</button>
+            </form>
+            <div class="row">
+                <ul class="cities"></ul>
+            </div>
+        </div>
+
+    </div>
+
+    
+
+    <div class="row" id="content">
+        <div class="column" id="tempCol">
+            <section class="primary">
+                <div class="temp" id="temp">--</div>
+                <div class="conditons" id="mainConditions">---</div>
+            </section>
+        </div>
+
+        <div class="column" id="layout">
+            <section class="content">
+                <div class="block">
+                    <p class="data" id="city">-----</p>
+                    <p class="subtitle" id="details">---</p>
+                    <figure id="icon"></figure>
+                </div>
+                <div class="row">
+                    <div class="column" id="details">
+                        <div class="block">
+                            <p class="data" id="feel">--</p>
+                            <p class="subtitle">Feels like</p>
+                        </div>
+                        <div class="block">
+                            <p class="data" id="humid">---%</p>
+                            <p class="subtitle">Humidity</p>
+                        </div>
+                    </div>
+
+                    <div class="column" id="more">
+                        <div class="row">
+                            <div class="column" id="windCol">
+                                <div class="block">
+                                    <p class="data" id="wind">--- mph</p>
+                                    <p class="subtitle">Wind Speed</p>
+                                </div>
+                                <div class="block">
+                                    <p class="data" id="windDirection">--</p>
+                                    <p class="subtitle">Wind Direction</p>
+                                </div>
+                            </div>
+                            <div class="column" id="sun">
+                                <div class="block">
+                                    <p class="data" id="sunRise">--</p>
+                                    <p class="subtitle">Sun Rise</p>
+                                </div>
+                                <div class="block">
+                                    <p class="data" id="sunSet">--</p>
+                                    <p class="subtitle">Sun Set</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-cover">
+                    <div class="button r" id="button">
+                        <input type="checkbox" class="checkbox" id="unit" onclick="unitToggle()" />
+                        <div class="knobs"></div>
+                        <div class="layer"></div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+
+
+<script src="script.js" defer></script>
+
 </html>

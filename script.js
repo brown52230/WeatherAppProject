@@ -175,13 +175,13 @@ form.addEventListener("submit", (e) => {
   const listItems = list.querySelectorAll(".modal-content .city");
   const inputVal = input.value;
   const limit = 4;
-  //ajax here
   const url = `https://api.openweathermap.org/geo/1.0/direct?q=${inputVal}&limit=${limit}&appid=90f14c855cac366c6c17ac5c2c77d82c`;
 
   fetch(url)
 	.then((response) => response.json())
 	.then((data) => {
 	  let locations = ([{ name, lat, lon, country }] = data);
+	  document.getElementById("cities").innerHTML = "";
 	  for (let i = 0; i < limit; i++) {
 		if (typeof locations[i].state === "undefined") {
 		  locations[i].state = "Unknown State";

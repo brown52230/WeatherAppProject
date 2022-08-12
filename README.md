@@ -16,7 +16,7 @@ For my project this summer, I wanted to do something completely different from w
 I wanted to build it within Javascript so I could learn how to use it, while also building a larger scale project.
 
 For a while though, I was stuck trying to find good ideas for a project. Then, I had the idea for a simple weather app. I felt like it was a good idea for a project
-asit encompasses old things I've learned, and things I haven't like API usage.
+as it encompasses old things I've learned, and things I haven't like API usage.
 
 After weeks of working on and off, and a week of working almost non-stop, the page is live. And I'm very happy with how it came out. 
 

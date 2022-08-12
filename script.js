@@ -17,7 +17,7 @@ window.onload = function () {
 				return;
 			});
 	}
-	locationCheck(false);
+	else locationCheck(false);
 }
 
 document.getElementById("locReq").onclick = async () => {
@@ -70,6 +70,7 @@ function apiFetch(lat, lon) {
 			console.log(resp);
 			weather = resp;
 			sessionStorage['authorizedGeoLocation'] = 1;
+			locationCheck(true);
 			dataFill();
 		})
 		.catch(function () {

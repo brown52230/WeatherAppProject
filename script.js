@@ -5,7 +5,7 @@ var weather = {};
 var locationSet;
 
 window.onload = function () {
-	if (localStorage['authorizedGeoLocation'] == 1) {
+	if (sessionStorage['authorizedGeoLocation'] == 1) {
 		navigator.geolocation.getCurrentPosition(
 			function locSuc(position) {
 				locationCheck(true);
@@ -69,7 +69,7 @@ function apiFetch(lat, lon) {
 			console.log("API call succeeded.");
 			console.log(resp);
 			weather = resp;
-			localStorage['authorizedGeoLocation'] = 1;
+			sessionStorage['authorizedGeoLocation'] = 1;
 			dataFill();
 		})
 		.catch(function () {

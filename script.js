@@ -8,7 +8,7 @@ window.onload = function () {
 	if (sessionStorage['authorizedGeoLocation'] == 1) {
 		navigator.geolocation.getCurrentPosition(
 			function locSuc(position) {
-				locationCheck(true);
+				locationCheck(false);
 				lat = position.coords.latitude;
 				lon = position.coords.longitude;
 				apiFetch(lat, lon);
@@ -17,7 +17,7 @@ window.onload = function () {
 				return;
 			});
 	}
-	else locationCheck(false);
+	else locationCheck(true);
 }
 
 document.getElementById("locReq").onclick = async () => {
@@ -70,7 +70,7 @@ function apiFetch(lat, lon) {
 			console.log(resp);
 			weather = resp;
 			sessionStorage['authorizedGeoLocation'] = 1;
-			locationCheck(true);
+			locationCheck(false);
 			dataFill();
 		})
 		.catch(function () {
